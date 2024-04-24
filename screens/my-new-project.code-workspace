@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "my-new-project",
+			"path": ".."
+		},
+		{
+			"name": "screens",
+			"path": "../../dev3/myschool-main/screens"
+		},
+		{
+			"name": "assets",
+			"path": "../../dev3/myschool-main/assets"
+		},
+		{
+			"name": "Components",
+			"path": "../../dev3/myschool-main/Components"
+		}
+	],
+	"settings": {}
+}
