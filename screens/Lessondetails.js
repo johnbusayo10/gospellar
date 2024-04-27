@@ -3,6 +3,7 @@ import { View, Text, ScrollView, Animated,Image, TouchableOpacity, ImageBackgrou
 import Card from '../Components/Card';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useRoute } from '@react-navigation/native';
+import colors from '../misc/colors';
 
 
 
@@ -21,7 +22,7 @@ const Lessondetails = ({navigation}) => {
 
   const headerTextColor = scrollY.interpolate({
     inputRange: [0, 100],
-    outputRange: ["#023047", "#000000"], // Change color from white to black as user scrolls up
+    outputRange: [colors.SECONDARY, "#000000"], // Change color from white to black as user scrolls up
     extrapolate: "clamp",
   });
 
@@ -54,7 +55,7 @@ const Lessondetails = ({navigation}) => {
     <MaterialCommunityIcons
       name="arrow-left"
       size={30}
-      color="#fb8500"
+      color= {colors.PRIMARY}
       onPress={() => navigation.goBack()}
       style={styles.icon}
     />
@@ -74,14 +75,15 @@ const Lessondetails = ({navigation}) => {
     [{ nativeEvent: { contentOffset: { y: scrollY } } }],
     { useNativeDriver: false }
   )}
+  className='bg-white'
 >
-<View style={[ { width:cardWidth, fontSize: windowWidth * 0.033 }]}  className=' w-[90%] mx-auto h-48 flex flex-row justify-between items-center bg-[#0d1b2a]'>
+<View style={[ { width:cardWidth, backgroundColor:colors.BOXCOLOR, fontSize: windowWidth * 0.033 }]}  className=' w-[90%] mx-auto h-48 flex flex-row justify-between items-center mt-5 rounded-lg'>
 <View className='w-1/2 min-h-full justify-center items-center '>
-<Text className=' font-extrabold text-2xl italic text-[#ffffff]'>LESSON</Text>
-<Text style={[{ fontSize: windowWidth * 0.16 }]} className=' font-extrabold text-7xl font-mono text-[#ffffff]'>{item.content.lesson_number}</Text>
+<Text className=' font-extrabold text-2xl italic'>LESSON</Text>
+<Text style={[{ fontSize: windowWidth * 0.16 }]} className=' font-extrabold text-7xl font-mono'>{item.content.lesson_number}</Text>
 
-<Text style={[ { fontSize: windowWidth * 0.033 }]} className=' font-medium text-sm text-[#ffffff] ' >{item.content.lesson_date}</Text>
-<Text style={[ { fontSize: windowWidth * 0.025 }]} className=' font-medium text-xs text-[#ffffff] '>(RESPONSIBILITY MONTH)</Text>
+<Text style={[ { fontSize: windowWidth * 0.033 }]} className=' font-medium text-sm  ' >{item.content.lesson_date}</Text>
+<Text style={[ { fontSize: windowWidth * 0.025 }]} className=' font-medium text-xs  '>(RESPONSIBILITY MONTH)</Text>
 </View>
 <Image style={[ {  fontSize: windowWidth * 0.04 }]} className=' w-1/2 h-full bg-transparent' source = {require('../assets/teach.png')} />
 </View>

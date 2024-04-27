@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import colors from "../misc/colors";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const { width, height } = Dimensions.get("window");
 
@@ -21,7 +22,7 @@ const Card = ({ icon, title, description }) => {
   return (
     <View
       style={styles.card}
-      className="  h-[220px] w-[250px] bg-[#faf3dd] m-2 rounded-xl flex flex-col justify-around items-center"
+      className="  h-[220px] w-[250px] bg-[#ef476f] m-2 rounded-xl flex flex-col justify-around items-center"
     >
       <Text style={styles.title}></Text>
       <TouchableOpacity
@@ -32,7 +33,7 @@ const Card = ({ icon, title, description }) => {
           <MaterialCommunityIcons
             name={icon}
             size={90}
-            color="#fb8500"
+            color={colors.PRIMARY}
             style={[ { fontSize: windowWidth * 0.22 }]}
           />
         )}
@@ -124,7 +125,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   openButton: {
-    backgroundColor: "#F194FF",
+    backgroundColor: colors.PRIMARY,
     borderRadius: 20,
     padding: 15,
     elevation: 2,

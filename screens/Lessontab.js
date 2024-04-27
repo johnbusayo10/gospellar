@@ -53,7 +53,7 @@ export const Lessontab = ({route}) => {
            onPress={()=> navigation.navigate('Lessontab',{item: item})}
            initialParams={{ item: item }}
         options={{
-          tabBarLabel: 'Lesson Content',
+          tabBarLabel: 'Lesson',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="book" color={color} size={26} />
           ),
@@ -65,15 +65,15 @@ export const Lessontab = ({route}) => {
            options={{
           tabBarLabel: 'Daily Reading',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="lightbulb" color={color} size={26} />
+            <MaterialCommunityIcons name="book-open" color={color} size={26} />
           ),
         }} />
 
         <Tab.Screen name="NoteScreen" component={NoteScreen}
            options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Note',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="lightbulb" color={color} size={26} />
+            <MaterialCommunityIcons name="note-edit" color={color} size={26} />
           ),
         }} />
 

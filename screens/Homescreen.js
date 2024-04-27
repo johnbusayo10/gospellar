@@ -15,6 +15,8 @@ const youth = require('../assets/youth.jpg')
 const adult = require("../assets/adult.jpg")
 
 
+const windowWidth = Dimensions.get('window').width;
+
 
 
 
@@ -82,9 +84,9 @@ const Homescreen = ({navigation}) => {
    <View className=" min-h-full w-[90%] flex flex-col items-center mx-auto ">
 
    <View className=" w-[100%] min-h-[60px] bg-inherit flex flex-row justify-between items-center align-middle">
-   <Text className=" font-semibold text-2xl text-[#463f3a] ">{greeting}</Text>
+   <Text style={[{ fontSize: windowWidth * 0.055 }]} className=" font-semibold  text-[#463f3a] ">{greeting}</Text>
   
-   <Image className=' w-14 h-14 rounded-full' source = {require('../assets/logo.png')} /> 
+   <Image style={[{ width:windowWidth *0.13,height: windowWidth *0.13, fontSize: windowWidth * 0.055 }]} className=' rounded-full' source = {require('../assets/logo.png')} /> 
    </View>
    
 
@@ -109,7 +111,7 @@ const Homescreen = ({navigation}) => {
 
  <View className='w-full'>
 
- <Text className='text-3xl font-extrabold text-[#023047] py-5'>Categorys</Text>
+ <Text style={[{ fontSize: windowWidth * 0.07 }]} className='text-3xl font-extrabold text-[#023047] py-5'>Categorys</Text>
 
 
      <View className=" w-full min-h-fit bg-white flex flex-row justify-between flex-wrap ">
@@ -189,7 +191,8 @@ const styles = StyleSheet.create({
     width: 10,
     height: 10,
     borderRadius: 5,
-    backgroundColor: 'blue',
+    backgroundColor: colors.PRIMARY
+    // backgroundColor: 'blue',
   },
 
   container1: {

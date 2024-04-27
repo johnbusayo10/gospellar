@@ -1846,7 +1846,7 @@ const Adult = ({ navigation }) => {
 
   const headerTextColor = scrollY.interpolate({
     inputRange: [0, 100],
-    outputRange: ["#023047", "#000000"], // Change color from white to black as user scrolls up
+    outputRange: [colors.SECONDARY, "#000000"], // Change color from white to black as user scrolls up
     extrapolate: "clamp",
   });
 
@@ -1885,7 +1885,7 @@ const Adult = ({ navigation }) => {
         <MaterialCommunityIcons
           name="arrow-left"
           size={30}
-          color="#fb8500"
+          color="#ff6700"
           onPress={() => navigation.goBack()}
           style={styles.icon}
         />
@@ -2049,7 +2049,7 @@ const styles = StyleSheet.create({
   },
 
   card: {
-    backgroundColor: "#023047",
+    backgroundColor: colors.SECONDARY,
     borderRadius: 10,
     padding: 10,
   },
